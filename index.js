@@ -34,7 +34,7 @@ function createRock(x) {
   GAME.appendChild(rock)
 
   function moveRock() {
-    while (rock.style.bottom < 400) {
+    if (rock.style.bottom < 400) {
 
      if (checkCollision(rock)){
        endGame()
