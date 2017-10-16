@@ -52,12 +52,13 @@ function createRock(x) {
           if (top < 380) {
             window.requestAnimationFrame(step)
           }
+        }
+        window.requestAnimationFrame(step)
       }
-      window.requestAnimationFrame(step)
-    }
     
+    }
+    GAME.removeChild(rock)
   }
-  GAME.removeChild(rock)
 }
 
   moveRock()
