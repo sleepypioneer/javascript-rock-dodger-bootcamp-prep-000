@@ -59,8 +59,6 @@ function createRock(x) {
     }
     GAME.removeChild(rock)
   }
-}
-
   moveRock()
   ROCKS.push(rock)
   // Finally, return the rock element you've created
@@ -72,7 +70,7 @@ function endGame() {
   for(let i = 0; i < ROCKS.length; i++){
     var currentRock = ROCKS[i];
     currentRock.remove();
-  }
+  };
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
@@ -89,14 +87,9 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
    var Left  = positionToInteger(DODGER.style.left)
    if (Left > 0 ){
-    console.log("testl")
+
     function step(){
       DODGER.style.left = `${Left - 4}px`
     }
@@ -105,17 +98,10 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
   var Right  = positionToInteger(DODGER.style.left)
   if (Right < 360){
-    console.log("testr")
     function step(){
       DODGER.style.left = `${Right + 4}px`
-      console.log(DODGER.style.right)
     }
     window.requestAnimationFrame(step)
   }
