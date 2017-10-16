@@ -57,7 +57,7 @@ function createRock(x) {
       }
 
     }
-    if (rock.style.bottom === 0) {
+    if (rock.style.bottom === 400) {
       GAME.removeChild(rock)
     }
   }
