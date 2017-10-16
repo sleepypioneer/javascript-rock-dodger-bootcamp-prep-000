@@ -42,7 +42,7 @@ function createRock(x) {
   GAME.appendChild(rock)
 
   function moveRock() {
-   While (rock.style.bottom < 400) {
+    While (rock.style.bottom < 400) {
 
      if (checkCollision(rock)){
        endGame()
@@ -57,7 +57,9 @@ function createRock(x) {
       }
 
     }
-    GAME.removeChild(rock)
+    if (rock.style.bottom === 0) {
+      GAME.removeChild(rock)
+    }
   }
   moveRock()
   ROCKS.push(rock)
