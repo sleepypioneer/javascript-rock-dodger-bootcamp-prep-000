@@ -29,7 +29,6 @@ function checkCollision(rock){
        ((rockLeftEdge >= dodgerLeftEdge) && (rockRightEdge <= dodgerRightEdge)) ||
        ((rockLeftEdge <= dodgerRightEdge) && (rockRightEdge >= dodgerRightEdge))) {
       return true
-    } else {
     }
   }
 }
@@ -44,7 +43,7 @@ function createRock(x) {
 
   function moveRock() {
    While (rock.style.bottom < 400) {
-     
+
      if (checkCollision(rock)){
        endGame()
      } else {
@@ -56,7 +55,7 @@ function createRock(x) {
       }
       window.requestAnimationFrame(step)
     }
-    
+
   }
   GAME.removeChild(rock)
 }
